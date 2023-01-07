@@ -62,7 +62,7 @@ curl http://localhost:8080/
 ### 4. View the traces in Jaeger UI
 Visit http://localhost:16686/
 
-![scenario](docs/jaeger_trace.jpg)
+![trace_example](docs/jaeger_trace.jpg)
 
 # References
 - [dapr concepts](https://docs.dapr.io/concepts/)

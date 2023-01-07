@@ -24,7 +24,7 @@ which is explicitly configured to do distributed tracing using the `tracing-conf
 - Java (Version >=17)
 - A running [Jaeger](https://www.jaegertracing.io/) instance
   ```shell
-  docker run \ 
+  docker run \
   -e COLLECTOR_ZIPKIN_HOST_PORT=:9412 \
   -p 16686:16686 \
   -p 9412:9412 \

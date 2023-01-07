@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.example.BKt")
+    mainClass.set("org.example.BKt")
 }
 
 ktor {

@@ -34,6 +34,7 @@ which is explicitly configured to do distributed tracing using the `tracing-conf
 
 ## Get started
 
+
 ### 1. Build all services
 
 ```shell
@@ -43,10 +44,10 @@ which is explicitly configured to do distributed tracing using the `tracing-conf
 ### 2. Run each service alongside a dapr sidecar
 
 ```shell
-dapr run --app-id a-service --app-port 8080 --app-protocol http --dapr-http-port 3500 --config tracing-config.yaml -- java -cp a/build/libs/fat.jar com.example.AKt
-dapr run --app-id b-service --app-port 8081 --app-protocol http --dapr-http-port 3501 --config tracing-config.yaml -- java -cp b/build/libs/fat.jar com.example.BKt
-dapr run --app-id c-service --app-port 8082 --app-protocol http --dapr-http-port 3502 --config tracing-config.yaml -- java -cp c/build/libs/fat.jar com.example.CKt
-dapr run --app-id d-service --app-port 8083 --app-protocol http --dapr-http-port 3503 --config tracing-config.yaml -- java -cp d/build/libs/fat.jar com.example.DKt
+dapr run --app-id a-service --app-port 8080 --app-protocol http --dapr-http-port 3500 --config tracing-config.yaml -- java -cp a/build/libs/fat.jar org.example.AKt
+dapr run --app-id b-service --app-port 8081 --app-protocol http --dapr-http-port 3501 --config tracing-config.yaml -- java -cp b/build/libs/fat.jar org.example.BKt
+dapr run --app-id c-service --app-port 8082 --app-protocol http --dapr-http-port 3502 --config tracing-config.yaml -- java -cp c/build/libs/fat.jar org.example.CKt
+dapr run --app-id d-service --app-port 8083 --app-protocol http --dapr-http-port 3503 --config tracing-config.yaml -- java -cp d/build/libs/fat.jar org.example.DKt
 ```
 
 As you can see, the dapr CLI is used to start up both, the dapr sidecar and the service.
@@ -60,6 +61,8 @@ curl http://localhost:8080/
 
 ### 4. View the traces in Jaeger UI
 Visit http://localhost:16686/
+
+![scenario](docs/jaeger_trace.jpg)
 
 # References
 - [dapr concepts](https://docs.dapr.io/concepts/)

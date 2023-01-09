@@ -45,8 +45,14 @@ which is explicitly configured to do distributed tracing using the `tracing-conf
 
 ```shell
 dapr run --app-id a-service --app-port 8080 --app-protocol http --dapr-http-port 3500 --config tracing-config.yaml -- java -cp a/build/libs/fat.jar org.example.AKt
+```
+```shell
 dapr run --app-id b-service --app-port 8081 --app-protocol http --dapr-http-port 3501 --config tracing-config.yaml -- java -cp b/build/libs/fat.jar org.example.BKt
+```
+```shell
 dapr run --app-id c-service --app-port 8082 --app-protocol http --dapr-http-port 3502 --config tracing-config.yaml -- java -cp c/build/libs/fat.jar org.example.CKt
+```
+```shell
 dapr run --app-id d-service --app-port 8083 --app-protocol http --dapr-http-port 3503 --config tracing-config.yaml -- java -cp d/build/libs/fat.jar org.example.DKt
 ```
 

@@ -19,7 +19,7 @@ fun main() {
 }
 
 fun Application.module() {
-    this@module.routing {
+    routing {
 
         get("/") {
             call.respondText(

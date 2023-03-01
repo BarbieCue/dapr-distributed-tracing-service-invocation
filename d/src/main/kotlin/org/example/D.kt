@@ -15,7 +15,7 @@ fun main() {
 }
 
 fun Application.module() {
-    this@module.routing {
+    routing {
 
         get("/") {
             call.respondText("Hi from D. I am the end of the trace ${call.request.header(httpTraceHeader)}")
